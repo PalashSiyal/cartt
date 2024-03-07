@@ -39,8 +39,8 @@ export default function Login() {
   };
 
   return (
-    <div className='flex min-h-screen flex-col'>
-      <header className='py-4 md:py-6 xl:py-8'>
+    <div className='flex min-h-screen flex-col mt-10 pt-10 '>
+      {/* <header className='py-4 md:py-6 xl:py-8'>
         <div className='container flex items-center space-x-4 px-4'>
         <Link className='flex items-center space-x-2' to='#'>
             <FlagIcon className='h-8 w-8' />
@@ -67,19 +67,20 @@ export default function Login() {
             </Link>
           </nav>
         </div>
-      </header>
-      <main className='flex-1'>
-        <div className='mx-auto max-w-3xl space-y-8 px-4'>
+      </header> */}
+      <main className='flex-1 mt-10 pt-10'>
+        <div className='mx-auto max-w-3xl bg-white rounded-lg space-y-8 px-4 shadow-lg'>
           <div className='space-y-2 text-center'>
-            <h1 className='text-3xl font-bold'>Create an account</h1>
+            <h1 className='text-3xl font-bold pt-5'>Create an account</h1>
             <p className='text-gray-500 dark:text-gray-400'>
               Already have an account?
-              <Link className='underline' to='#'>
-                Sign in
-              </Link>
+              <Link className='underline text-buttonColor pl-2' to='/login'>
+  log in
+</Link>
+
             </p>
           </div>
-          <div className='space-y-4'>
+          <div className='space-y-4 px-6'>
             <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
               <div className='space-y-2'>
                 <Label htmlFor='username'>Username</Label>
@@ -98,9 +99,9 @@ export default function Login() {
                 <Input id='confirm-password' required type='password' />
               </div>
             </div>
-            <Link to='/' className='w-full'>
-              <button className='rounded bg-blue-500 px-4 py-2 font-bold text-white w-full'>
-                Sign in
+            <Link to='/login' className='w-full'>
+              <button className='rounded bg-[rgba(34,34,34,1)] px-4 py-2 my-10 font-bold text-white w-full'>
+                Sign Up
               </button>
             </Link>
           </div>
@@ -109,7 +110,7 @@ export default function Login() {
       <footer className='border-t'>
         <div className='container flex items-center justify-between px-4 py-4'>
           <div className='text-sm text-gray-500 dark:text-gray-400'>
-            © 2023 Company. All rights reserved.
+           
           </div>
           <nav className='space-x-4 text-sm'>
             <Link className='underline' href='#'>

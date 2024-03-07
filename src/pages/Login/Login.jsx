@@ -39,67 +39,41 @@ export default function Login() {
   };
 
   return (
-    <div className='flex min-h-screen flex-col'>
-      <header className='py-4 md:py-6 xl:py-8'>
-        <div className='container flex items-center space-x-4 px-4'>
-          <Link className='flex items-center space-x-2' to='#'>
-            <FlagIcon className='h-8 w-8' />
-            <span className='text-lg font-bold'>Company</span>
-          </Link>
-          <nav className='ml-auto flex space-x-4'>
-            <Link
-              className='font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-              to='#'
-            >
-              Features
-            </Link>
-            <Link
-              className='font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-              to='#'
-            >
-              Pricing
-            </Link>
-            <Link
-              className='font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
-              to='#'
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
-      <main className='flex-1'>
-        <div className='mx-auto max-w-2xl space-y-8 px-4'>
-          <div className='space-y-2 text-center'>
-            <h1 className='text-3xl font-bold'>Sign in to your account</h1>
-            <p className='text-gray-500 dark:text-gray-400'>
-              Don't have an account yet?
-              <Link className='underline' to='#'>
-                Sign up
+    <div className='flex min-h-screen flex-col mt-10 pt-10 shadow bg-[rgba(248,240,228,1)]'>
+      <main className='flex-1 mt-10 pt-10 shadow'>
+        <div className='mx-auto max-w-2xl p-6 bg-white rounded-lg shadow-lg bg-[rgba(248,240,228,1)]'>
+          <div className='space-y-8'>
+            <div className='space-y-2 text-center'>
+              <h1 className='text-3xl font-bold'>Sign in to your account</h1>
+              <p className='text-gray-500 dark:text-gray-400'>
+                Don't have an account yet?
+                <Link className='underline text-buttonColor pl-2' to='/sign-up'>
+                  Sign up
+                </Link>
+              </p>
+            </div>
+            <div className='space-y-4 px-4'>
+              <div className='space-y-2'>
+                <Label htmlFor='email'>Email</Label>
+                <Input id='email' placeholder='m@example.com' required type='email' />
+              </div>
+              <div className='space-y-2'>
+                <Label htmlFor='password'>Password</Label>
+                <Input id='password' required type='password' />
+              </div>
+              <Link to='/' className='w-full'>
+                <button className='rounded bg-[rgba(34,34,34,1)] px-4 py-2 font-bold text-white w-full mt-5'>
+                  Log in
+                </button>
               </Link>
-            </p>
-          </div>
-          <div className='space-y-4'>
-            <div className='space-y-2'>
-              <Label htmlFor='email'>Email</Label>
-              <Input id='email' placeholder='m@example.com' required type='email' />
             </div>
-            <div className='space-y-2'>
-              <Label htmlFor='password'>Password</Label>
-              <Input id='password' required type='password' />
-            </div>
-            <Link to='/' className='w-full'>
-              <button className='rounded bg-blue-500 px-4 py-2 font-bold text-white w-full'>
-                Log in
-              </button>
-            </Link>
           </div>
         </div>
       </main>
       <footer className='border-t'>
         <div className='container flex items-center justify-between px-4 py-4'>
           <div className='text-sm text-gray-500 dark:text-gray-400'>
-            © 2023 Company. All rights reserved.
+            
           </div>
           <nav className='space-x-4 text-sm'>
             <Link className='underline' href='#'>
@@ -113,6 +87,7 @@ export default function Login() {
       </footer>
     </div>
   );
+  
 }
 
 function FlagIcon(props) {

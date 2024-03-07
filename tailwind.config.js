@@ -1,35 +1,33 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
+// tailwind.config.js
 
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: ['./src/**/**/*.{js,ts,jsx,tsx}'],
-//   darkMode: 'class',
-//   theme: {
-//     extend: {
-//       colors: {
-//         primary: 'var(--primary)',
-//         secondary: 'var(--secondary)',
-//         tertiary: 'var(--tertiary)',
-//         color: 'var(--color)',
-//         'accent-primary': 'var(--accent-primary)',
-//         'accent-primary-state': 'var(--accent-primary-state)'
-//       }
-//     }
-//   }
-// };
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    fontFamily: {
+      primary: 'Poppins',
+    },
+    container: {
+      padding: {
+        DEFAULT: '30px',
+        lg: '0',
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1440px',
+    },
+    extend: {
+      colors: {
+        primary: '#222222',
+        secondary: '#F5E6E0',
+        buttonColor: 'rgba(34, 34, 34, 1)', // Added custom RGBA color
+      },
+      backgroundImage: {
+        hero: "url('./img/bghero.jpg')",
+      },
+    },
   },
   plugins: [],
-}
+};
